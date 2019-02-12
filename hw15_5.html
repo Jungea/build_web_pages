@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>[hw15_5] jquery</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script>
+		//hw15_5
+		//201732033 정은애
+
+		$(document).ready(function() {
+			$('ul#m > li').each(function (index, item) {
+				$(item).text('리스트'+(index+1))
+			});
+		})
+	</script>
+</head>
+<body>
+	<xmp>
+		[hw15_5] jquery
+		----------------------------------------------------------
+
+		- 아래 작업을 하도록 jquery를 사용하여 완성하시오
+
+		<body>
+			<ul id="m">
+				<li>내용1</li>
+				<li>내용2</li>
+				<li>내용3</li>
+			</ul>
+
+			<ul id="n">
+				<li>내용1</li>
+				<li>내용2</li>
+				<li>내용3</li>
+			</ul>
+		</body>
+
+		- each 메소드를 이용하여 m의 하위 li태그의 내용을 리스트1, 리스트2, 리스트3로 변경하시오.
+	</xmp>
+
+	<ul id="m">
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3</li>
+	</ul>
+
+	<ul id="n">
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3</li>
+	</ul>
+</body>
+</body>
+</html>

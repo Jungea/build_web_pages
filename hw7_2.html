@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>[hw7_2] Circle 객체 생성자 함수</title>
+	<script>
+		//hw7_2
+		//201732033
+		//정은애
+
+		function Circle(r, x, y) {
+			var radius = r;
+			var xpos = x;
+			var ypos = y;
+
+			this.getRadius = function () {
+				return radius;
+			};
+			this.setRadius = function(r) {
+				if(r<0)
+					radius = 1.0;
+				else
+					radius = r;
+			};
+			this.getXpos = function () {
+				return xpos;
+			};
+			this.setXpos = function(x) {
+				xpos = x;
+			};
+			this.getYpos = function () {
+				return ypos;
+			};
+			this.setYpos = function(y) {
+				ypos = y;
+			};
+		}
+		Circle.prototype.area = function () {
+			return this.getRadius()*this.getRadius()*3.14;
+		};
+		Circle.prototype.move = function (x,y) {
+			this.setXpos(this.getXpos()+x);
+			this.setYpos(this.getYpos()+y);
+		};
+
+		// (1) 원 객체를 두개 생성(circle1, circle2라고 부르자)
+		var circle1 = new Circle();
+		var circle2 = new Circle();
+
+		// (2) circle1의 반지름을 1.5, 좌표를 (3, 4)로 설정
+		circle1.setRadius(1.5);
+		circle1.setXpos(3);
+		circle1.setYpos(4);
+
+		// (3) circle2의 반지름을 -1.5, 좌표를 (-3, -4)로 설정
+		circle2.setRadius(-1.5);
+		circle2.setXpos(-3);
+		circle2.setYpos(-4);
+
+		// (4) circle1을 x축으로 20, y축으로 10만큼 이동
+		circle1.move(20, 10);
+
+		// (5) circle2도 x축으로 20, y축으로 10만큼 이동
+		circle2.move(20, 10);
+
+		// (6) circle1, circle2 에게 각자의 현재 x, y좌표와 면적을 물어보아 알아내어 출력
+		var output = '';
+		output += 'circle1 좌표 = ('+circle1.getXpos()+', '+circle1.getYpos()+') 면적 = '+circle1.area()+'\n';
+		output += 'circle2 좌표 = ('+circle2.getXpos()+', '+circle2.getYpos()+') 면적 = '+circle2.area();
+
+		alert(output);
+
+	</script>
+</head>
+<body>
+	<pre>
+		원을 나타내는 Circle 클래스를 정의하고 이를 이용하는 프로그램을 작성하시오.
+
+		- Circle 클래스
+
+		필드: 반지름, x좌표, y좌표(세 값 모두 실수)
+
+		메소드: 총 8개
+		각 필드에 대한 getter와 setter
+		(단, 반지름을 음수로 설정하려고 시도하면 음수 대신 1.0으로 설정)
+		area - 면적을 계산하여 리턴(파이값은 3.14로 할 것). 
+		매개변수:       리턴값:
+		move - x축 이동거리와 y축 이동거리를 매개변수로 받아 x, y 좌표에 더함
+		매개변수:       리턴값:
+
+
+		- 다음을 수행
+
+		(1) 원 객체를 두개 생성(circle1, circle2라고 부르자)
+		(2) circle1의 반지름을 1.5, 좌표를 (3, 4)로 설정
+		(3) circle2의 반지름을 -1.5, 좌표를 (-3, -4)로 설정
+		(4) circle1을 x축으로 20, y축으로 10만큼 이동
+		(5) circle2도 x축으로 20, y축으로 10만큼 이동
+		(6) circle1, circle2 에게 각자의 현재 x, y좌표와 면적을 물어보아 알아내어 출력
+	</pre>
+</body>
+</html>

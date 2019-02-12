@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>[hw16_4] jquery event</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script>
+		//hw16_4
+		//201732033 정은애
+
+		$(document).ready(function() {
+			$('#rel_site').change(function () {
+				var s = $('#rel_site').val();
+				$('#txt').text(s);
+			});
+		});
+	</script>
+</head>
+<body>
+	<xmp>
+		[hw16_4] jquery event
+		----------------------------------------------------------
+
+		- 아래 작업을 하도록 jquery를 사용하여 완성하시오
+
+		<body>
+			<select id="rel_site">
+				<option value="">사이트 선택</option>
+				<option value="www.naver.com">네이버</option>
+				<option value="www.nate.com">네이트</option>
+				<option value="www.daum.net">다음</option>
+			</select>
+			<p id="txt"></p>
+		</body>
+
+		- select 태그를 변경할 때마다 txt에 값을 출력하시오. - change()이벤트 사용.
+	</xmp>
+
+	<select id="rel_site">
+		<option value="">사이트 선택</option>
+		<option value="www.naver.com">네이버</option>
+		<option value="www.nate.com">네이트</option>
+		<option value="www.daum.net">다음</option>
+	</select>
+	<p id="txt"></p>
+</body>
+</body>
+</html>

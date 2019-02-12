@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>[hw8_2] String 객체</title>
+	<script>
+		//[hw8_2]
+		//201732033
+		//정은애
+
+		var input = prompt('입력: ');
+
+
+		var output = '출력: \n';
+		output += '문장 = '+input+'\n';
+		output += '길이 = '+input.length+'\n';
+
+		var check;
+		var count=0;
+		while(true) {
+			check = input.match(/a/i);
+			if(check == null)
+				break;
+			input = input.replace(/a/i, '*');
+			count++;
+		}
+		//찾고 바꾸고
+
+		output += 'a 또는 A의 개수 = '+count+'\n';
+		output += input;
+		alert(output);
+	</script>
+</head>
+<body>
+	<pre>
+		[hw8_2] String 객체
+		----------------------------------------------------------
+
+		사용자로부터 한 줄의 문장을 입력받아 문장의 길이와 
+		a 또는 A가 몇번 나오는지 알아내고, a과 A를 모두 *로 바꾸어 출력하는 프로그램을 작성하시오.
+
+		- 입력: 한 줄의 문장
+		- 출력: a 또는 A의 개수
+
+		- 실행 예
+
+
+		입력: An apple a day!
+
+		출력:
+
+		문장 = An apple a day! 
+		길이 = 15
+		a 또는 A의 개수 = 4
+		*n *pple * d*y!
+	</pre>
+</body>
+</html>

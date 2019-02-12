@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>[hw6_2] book 객체</title>
+	<script>
+		//hw6_2
+		//201732033
+		//정은애
+
+		var book = {
+			title: '모던 웹을 위한 JavaScript jQuery 입문',
+			price: '32000원',
+			year: '2018년'
+		};
+
+		book.author = '윤인성';
+		//(1)저자(author) 속성(이름 적절히 부여)을 객체 외부에서 동적으로 추
+
+		//(2) with 키워드를 사용하여 내용을 출력하시오.(코드 6-12 참조)
+		var output = '';
+		with(book) {
+			output += 'title: '+title+'\n';
+			output += 'price: '+price+'\n';
+			output += 'year: '+year+'\n';
+			output += 'author: '+author;
+		}
+
+		alert(output);
+	</script>
+</head>
+<body>
+	<pre>
+		book 객체
+
+		hw6_1의 book 객체에서
+
+		(1)저자(author) 속성(이름 적절히 부여)을 객체 외부에서 동적으로 추가하고
+
+		(2) with 키워드를 사용하여 내용을 출력하시오.(코드 6-12 참조)
+	</pre>
+</body>
+</html>

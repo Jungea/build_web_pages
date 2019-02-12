@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>[hw8_4] Array 객체</title>
+	<script>
+		//hw8_4
+		//201732033
+		//정은애
+
+		function Book(title, price, year, author) {
+			this.title = title;
+			this.price = price;
+			this.year = year;
+			this.author = author;
+		}
+
+		Book.prototype.toString = function () {
+			var output = 'title: '+this.title+'\nprice: '+this.price+'\nyear: '+this.year+'\nauthor: '+this.author+'\n';
+			return output;
+		}
+		Book.discount = function () {
+			if(this.year==2014)
+				this.price *= 0.9;
+			else if(this.year<2014)
+				this.price *= 0.5;
+		}
+
+		var books = [];
+		var myBook = new Book('java', 10000, 2014, '정우성');
+		books.push(myBook);
+		var yourBook = new Book('database', 20000, 2013, '장동건');
+		books.push(yourBook);
+		var ourBook = new Book('computer', 30000, 2009, '강동원');
+		books.push(ourBook);
+
+		var resultBook = books.sort(function (left, right) {
+			return right.price - left.price;
+		});
+
+		var output = '';
+		for(var i in resultBook)
+			output += resultBook[i]+'\n';
+		alert(output);
+
+
+		var resultBook = books.slice(0, 2);
+
+		var output = '';
+		for(var i in resultBook)
+			output += resultBook[i]+'\n';
+		alert(output);
+
+	</script>
+</head>
+<body>
+	<pre>
+		[hw7_1]의 books 배열에서 가격이 비싼 순으로 정렬하여 출력하고 가장 비싼 책 2권만 저장하고 출력하시오.
+
+
+		출력: 책정보 2회
+	</pre>
+</body>
+</html>

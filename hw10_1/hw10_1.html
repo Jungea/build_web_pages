@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>[hw10_1] DOM 객체</title>
+	<script>
+		//hw10_1
+		//201732033 정은애
+
+		window.onload = function() {
+			var car2 = document.createElement('img');  //동적 추가
+			car2.src = "car2.png"; //속성 추가
+			car2.width = 200;
+			car2.height = 80;
+
+			document.body.appendChild(car2);
+
+			var car1 = document.getElementById("car1");
+
+			car1.style.position = "absolute";
+			car2.style.position = "absolute";
+
+			var xCar1 = 10;  //left 값
+			var xCar2 = 10;
+			car1.style.top = 10+"px";
+			car1.style.left = xCar1+"px";
+			car2.style.top = 150+"px";
+			car2.style.left = xCar2+"px";
+
+			var width = 700;  //멈출 지점
+
+			var speedCar1 = Math.random()*20+1;  //랜덤 속도(0을 제외)
+			var speedCar2 = Math.random()*20+1;
+
+			var intervalId = setInterval(function() {
+				if(xCar1+speedCar1 > width) {
+					speedCar1=0;
+					xCar1=700;
+				}
+				xCar1 += speedCar1;
+				car1.style.left = xCar1+"px";
+
+				if(xCar2+speedCar2 > width) {
+					speedCar2=0;
+					xCar2=700;
+				}
+				xCar2 += speedCar2;
+				car2.style.left = xCar2+"px";
+
+			}, 1000/30);
+		};
+
+	</script>
+</head>
+<body>
+	<img id="car1" src="car1.png" alt="자동차이미지1" width="200" height="100"/>
+</body>
+</html>

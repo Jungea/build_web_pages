@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>[hw6_3] book 객체</title>
+	<script>
+		//hw6_3
+		//201732033
+		//정은애
+
+		var book = {
+			title: '모던 웹을 위한 JavaScript jQuery 입문',
+			price: '32000원',
+			year: '2018년'
+		};
+
+		book.author = '윤인성';
+		book.toString = function () {
+			var output = '';
+			for(var key in this) {
+				if(key != 'toString')
+					output += key+': '+this[key]+'\n';
+			}
+
+			return output;
+		};
+
+		alert(book.toString());
+	</script>
+</head>
+<body>
+	<pre>
+		book 객체
+
+		hw6_2의 book 객체에서
+
+		(1) book 객체의 내용을 출력하는 toString 메소드를 동적으로 추가하고
+		(2) alert(book.toString)을 사용하여 출력하시오.(코드 6_17 참조)
+		
+	</pre>
+</body>
+</html>

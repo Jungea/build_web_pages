@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>[hw15_2] jquery</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript">
+	//hw15_2
+	//201732033 정은애
+	$(function(){
+		$('li:not(li:first)').css('background','yellow');
+	//$('li').not(':eq(0)').css('background','yellow');
+});
+</script>
+</head>
+<body>
+	<xmp>
+		[hw15_2] jquery
+		----------------------------------------------------------
+
+		- 아래 작업을 하도록 jquery를 사용하여 완성하시오
+
+		<body>
+			<ul id="myList">
+				<li>내용1</li>
+				<li>내용2</li>
+				<li>내용3</li>
+				<li>내용4</li>
+			</ul>
+		</body>
+
+		- not 방식를 이용하여 첫번째 li요소만 제외한 li의 배경색을 노란색으로 적용하여라
+	</xmp>
+
+	<ul id="myList">
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3</li>
+		<li>내용4</li>
+	</ul>
+</body>
+</html>

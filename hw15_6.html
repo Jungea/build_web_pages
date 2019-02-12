@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>[hw15_6] jquery</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script>
+		//hw15_6
+		//201732033 정은애
+
+		$(document).ready(function() {
+			$('#myList').before('<li>새 내용 추가 1</li>');
+			$('<li>새 내용 추가 1</li>').insertBefore('#myList');
+			$('#myList').after($('#myList').clone());
+			$('#myList').clone().insertAfter('#myList')
+		})
+
+	</script>
+</head>
+<body>
+	<xmp>
+		[hw15_6] jquery
+		----------------------------------------------------------
+
+		- 아래 작업을 하도록 jquery를 사용하여 완성하시오
+
+		<body>
+			<ul>
+				<li id="myList">내용</li>
+			</ul>
+		</body>
+
+		
+
+		- id myList 전에 li "새 내용 추가 1을 추가하고
+		- id myList 다음 위치에 같은 내용을 복사하여 추가하시오.
+
+	</xmp>
+
+	<ul>
+		<li id="myList">내용</li>
+	</ul>
+</body>
+</body>
+</html>

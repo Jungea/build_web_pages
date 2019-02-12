@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>[hw5_1] 익명의 함수</title>
+	<script>
+		//201732033 정은애
+
+		var height = Number(prompt('신장을 입력하세요.'));
+		var weight = Number(prompt('몸무게를 입력하세요.'));
+
+		var result = function(height, weight) {
+			var w = ((height - 100) * 0.9);
+			if (w <= weight)
+				alert('적정 몸무게 이상');
+			else if(w>weight)
+				alert('적정 몸무게 미달')
+		}
+
+		result(height, weight)
+
+	</script>
+</head>
+<body>
+	<pre>
+		hw3_1에서 적정 몸무게 계산 및 출력하는 익명의 함수를 선언하고 이를 이용하는 프로그램을 작성하시오.
+
+		매개변수 : 입력 받은 신장, 몸무게
+	</pre>
+</body>
+</html>

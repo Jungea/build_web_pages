@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>[hw9_2] BOM 객체</title>
+	<script>
+		//hw9_2
+		//201732033  정은애
+
+		var w =window.open('','','width=400, height=300, location=yes, menubar=no')
+		w.moveTo(300,10);
+
+		function b1() {
+			w.moveTo(200,300);
+			w.focus();
+		}
+
+		function b2() {
+			w.resizeTo(screen.width/2, screen.height/2)
+			w.focus();
+		}
+
+		function b3() {
+			w.location.assign('https://www.naver.com/');
+			w.focus();
+		}
+	</script>
+</head>
+<body>
+	<button onclick="b1();"> 창 위치 변경 </button>
+	<button onclick="b2();"> 창 크기 변경 </button>
+	<button onclick="b3();"> 네이버 </button>
+
+	<pre>
+		[hw9_2] BOM 객체
+		----------------------------------------------------------
+
+		브라우저 객체 모델을 활용하여 다음의 작업을 하는 프로그램을 작성하시오.
+		- hw9_1에서 새로운 창에 네이버가 페이지가 나오도록 버튼을 하나 추가하시오.
+	</pre>
+</body>
+</html>

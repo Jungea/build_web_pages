@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>[hw6_1] book 객체</title>
+	<script>
+		//hw6_1
+		//201732033
+		//정은애
+
+		var book = {
+			title: '모던 웹을 위한 JavaScript jQuery 입문',
+			price: '32000원',
+			year: '2018년'
+		};
+
+		var output ='';
+
+		for(var key in book) 
+			output += key+ ': '+book[key]+'\n';
+
+		alert(output);
+	</script>
+</head>
+<body>
+	<pre>
+		book 객체
+		속성 : 제목(title), 가격(price), 발행연도(year)
+		
+		
+		(1) book 객체를 선언할 때
+		(2) 책의 제목을 적절히 지정
+		(3) 책의 가격을 적절히 지정
+		(4) 책의 발행연도를 적절히 지정
+		
+		(5) for in 반복문을 사용해서 key와 내용을 출력
+	</pre>
+</body>
+</html>

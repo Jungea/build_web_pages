@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>[hw9_1] BOM 객체</title>
+	<script>
+		//hw9_1
+		//201732033  정은애
+
+		var w =window.open('','','width=400, height=300, location=yes, menubar=no')
+		w.moveTo(300,10);
+
+		function b1() {
+			w.moveTo(200,300);
+			w.focus();
+		}
+
+		function b2() {
+			w.resizeTo(screen.width/2, screen.height/2)
+			w.focus();
+		}
+	</script>
+</head>
+<body>
+	<button onclick="b1();"> 창 위치 변경 </button>
+	<button onclick="b2();"> 창 크기 변경 </button>
+
+	<xmp>
+		[hw9_1] BOM 객체
+		----------------------------------------------------------
+
+		브라우저 객체 모델을 활용하여 다음의 작업을 하는 프로그램을 작성하시오.
+		- 빈 페이지를 새창으로 연다(크기: 400, 300, 위치 : 가로 300, 세로 10, 메뉴바도 없음, 주소창은 보이도록)
+		- "창 위치 변경" 버튼을 클릭했을 때 위치를 200, 300으로 옮김
+		- "창 크기 변경" 버튼을 클릭했을 때 크기를 현재 화면 사이즈의 반 크기로 변경
+		각 버튼을 클릭한 후에는 새로 열은 창에 포커스가 있게 한다.
+
+		힌트 : 버튼
+
+		<button onclick="함수들"> 창 위치 변경 </button>
+		<button onclick="함수들"> 창 크기 변경 </button>
+	</xmp>
+</body>
+</html>

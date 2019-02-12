@@ -1,0 +1,22 @@
+	
+[hw15_1] jquery
+----------------------------------------------------------
+
+- 아래 작업을 하도록 jquery를 사용하여 완성하시오
+
+<body>
+<h1>객체 조작 및 생성</h1>
+<p id="wrap">
+  <img src="images/math_img_1.jpg" alt="가위" width="100" />
+</p>
+<p id="txt"></p>
+<p id="box">
+  <img src="images/math_img_3.jpg" alt="보" width="100" border="2"/>
+</p>
+</body>
+
+ 
+
+- id=wrap 요소의 img 태그의 src 속성의 값을 불러와 id=txt에 텍스트로 생성.
+- id=wrap 요소의 img의 너비를 200으로 변경
+- id=box 요소의 img의 border를 제거

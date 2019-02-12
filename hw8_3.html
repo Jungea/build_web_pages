@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>[hw8_3] 이메일 확인 객체</title>
+	<script>
+		//[hw8_3]
+		//201732033 정은애
+
+		var email = prompt('입력 : ', '이메일');
+
+		String.prototype.check = function () {
+			var contain = ['co.kr', 'com', 'net', 'or.kr', 'go.kr'];
+			var count = 0;
+
+			for(var i = 0 ; i< contain.length; i++) {
+				if(this.match(contain[i]) != null) {
+					count++;
+					break;
+				}
+			}
+
+			if(count!=1) 
+				return false;
+			
+			else {
+				var at = this.match('@');
+				if(at == '@')
+					return true;
+				else
+					return false; 
+			}
+		}
+
+		if(email.check()==true)
+			alert(email)
+		else
+			alert('이메일이 잘못되었습니다.');
+
+	</script>
+</head>
+<body>
+	<pre>
+		[hw8_3] 이메일 확인 객체
+		----------------------------------------------------------
+
+		사용자에게 이메일을 입력받아 이메일이 유효한지 검사하는 프로그램을 작성하시오.
+		유효성 체크 : 도메인의 주소가 co.kr, com, net, or.kr, go.kr이 포함돼 있는지 그리고 @이 포함되 있는지 학인
+		
+
+		입력 : 이메일
+
+		출력: 유효하면 이메일 주소를 화면에 출력(document.write) 유효하지 않으면 이메일이 잘못되었다고 경고창 출력
+	</pre>
+</body>
+</html>

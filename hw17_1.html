@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>[hw17_1] jquery effect</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script>
+		//hw17_1
+		//201732033 정은애
+		
+		$(document).ready(function() {
+			$('#btn').click(function () {
+				$('h1').fadeOut(1000)
+			})
+		});
+	</script>
+</head>
+<body>
+	<xmp>
+		[hw17_1] jquery effect
+		----------------------------------------------------------
+
+		- 아래 작업을 하도록 jquery를 사용하여 완성하시오
+
+
+		<body>
+			<button id="btn">버튼</button>
+			<h1>내용</h1>
+		</body>
+
+		- 버튼을 눌렀을 때 효과 메소드를 이용하여 h1이 점점 투명해지면서 숨겨지도록 하시오. 숨기는 속도는 1초.
+	</xmp>
+
+	<button id="btn">버튼</button>
+	<h1>내용</h1>
+</body>
+</body>
+</html>

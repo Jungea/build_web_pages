@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>[hw16_2 jquery event</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script>
+		//hw16_2
+		//201732033 정은애
+
+		$(document).ready(function() {
+			var i =0;
+			$('#btn1').click(function () {
+				if(i%2==0)
+					$('#img1').attr('src', 'images/click_btn_on.png');
+				else
+					$('#img1').attr('src', 'images/click_btn_out.png');
+				i++;
+			});
+
+
+			$('#btn2').hover(function () {
+				$('#img2').attr('src','images/over_btn_on.png');
+			}, function () {
+				$('#img2').attr('src','images/over_btn_out.png')
+			})
+
+
+			$('#btn3').hover(function () {
+				$('#img3').attr('src','images/out_btn_out.png');
+			}, function () {
+				$('#img3').attr('src','images/out_btn_on.png')
+			}).focus(function () {
+				$('#img3').attr('src','images/out_btn_out.png');
+			}).blur(function () {
+				$('#img3').attr('src','images/out_btn_on.png')
+			})
+
+		});
+	</script>
+</head>
+<body>
+	<h1>마우스 클릭했을 때 이미지 변경</h1>
+	<p>( images/click_btn_out.png → images/click_btn_on.png )</p>
+	<p><a href="#" id="btn1">
+		<img src="images/click_btn_out.png" id="img1" />
+	</a></p>
+	<h1>마우스 오버했을 때 이미지 변경</h1>
+	<p>( images/over_btn_out.png → images/over_btn_on.png )</p>
+	<p><a href="#" id="btn2">
+		<img src="images/over_btn_out.png" id="img2" />
+	</a></p>
+	<h1>마우스 아웃했을 때 이미지 변경</h1>
+	<p>( images/out_btn_out.png → images/out_btn_on.png )</p>
+	<p><a href="#" id="btn3">
+		<img src="images/out_btn_out.png" id="img3" />
+	</a></p>
+</body>
+</body>
+</html>

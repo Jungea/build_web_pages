@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>[hw3_1] 몸무게</title>
+    <script>
+        //201732033 정은애
+
+        var height = Number(prompt('신장을 입력하세요.'));
+        var weight = Number(prompt('몸무게를 입력하세요.'));
+        var w = ((height - 100) * 0.9);
+
+        if (w < weight)
+            alert('적정 몸무게 이상');
+        else if(w>weight)
+            alert('적정 몸무게 미달')
+
+    </script>
+</head>
+<body>
+ <pre>
+    사용자로부터 신장과 몸무게를 입력 받아 적정 몸무게 보다 이상일 경우 "적정 몸무게 이상", 미만일 경우 적정 몸무게 미달"로 출력하는 프로그램을 작성하시오.
+
+    (적정 몸무게 = (신장-100)*.0.9)
+
+    - 입력 : 신장, 몸무게
+    - 출력 : 결과
+</pre>
+</body>
+</html>

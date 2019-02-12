@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>[hw3_2] 생년월일</title>
+    <script>
+        //201732033 정은애
+
+        var front = Number(prompt('주민등록번호 앞자리를 입력하세요'));
+        var back = Number(prompt('주민등록번호 뒷자리를 입력하세요'));  
+
+        var birthday = '생년월일은 다음과 같습니다.';
+
+        birthday += Number(back / 1000000) < 3 ? "\n19" : "\n20";
+        year =  (front-front%10000)/10000;
+        birthday += year+'\n';
+        
+        front = front-year*10000;
+        var mon = (front-front%100)/100;
+
+        birthday += mon+'\n';
+
+        var day = front%100;
+        birthday += day;
+
+        alert(birthday);
+    </script>
+</head>
+<body>
+    <pre>
+        [hw3_2] 생년월일
+
+        주민등록번호로부터 생년월일을 알아보는 프로그램을 작성하시오.
+        단, 조건문(if)은 사용하지 말고 2장에서 배운 연산자들을 이용할 것
+
+        - 입력: 주민등록번호 앞자리, 뒷자리
+        - 출력: 생년월일
+
+
+        주민등록번호 앞자리 입력: 110523
+        주민등록번호 뒷자리 입력: 4023111
+
+        생년월일은 다음과 같습니다.
+        2011
+        5
+        23
+
+        - 힌트:
+        삼항 연산자 a ? b : c
+
+        **** 배열사용 불가,  substring 등과 같은 함수 사용 불가
+    </pre>
+
+</body>
+</html>

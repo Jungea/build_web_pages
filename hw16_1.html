@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>[hw16_1] jquery event</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script>
+		//hw16_1
+		//201732033 정은애
+
+		$(document).ready(function() {
+			$('#btn1').click(function () {
+				$('p').css('background', 'yellow');
+			});
+			$('#btn2').dblclick(function() {
+				$('p').css('background', 'purple');
+			});
+		});
+	</script>
+</head>
+<body>
+	<xmp>
+		[hw16_1] jquery event
+		----------------------------------------------------------
+
+		- 아래 작업을 하도록 jquery를 사용하여 완성하시오
+
+		<body>
+			<button id="btn1">click</button>
+			<button id="btn2">dblclick</button>
+			<p>내용</p>
+		</body>
+
+		- btn1 클릭했을 때 p의 태그의 배경을 yellow로
+		- btn2 더블 클릭했을 때 p의 태그 배경을 purple로 변경하시오.
+	</xmp>
+
+	<button id="btn1">click</button>
+	<button id="btn2">dblclick</button>
+	<p>내용</p>
+</body>
+</body>
+</html>
